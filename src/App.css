@@ -1,38 +1,120 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Righteous', cursive;
+  background: url('back2.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #f0f0f0;
+}
+
+/* Home Page Button Styles */
+.home-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-link {
+  background-color: rgba(50, 50, 50, 0.8);
+  color: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Righteous', cursive;
+  font-size: 1.5em;
+  transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+
+.home-link:hover {
+  background-color: #c0c0c0;
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* NasaPhoto Page Styles */
+.nasa-photo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  padding: 20px;
+  max-width: 1200px;
+  height: 80vh;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  font-family: 'Righteous', cursive;
+  overflow: hidden;
+}
+
+.nasa-photo {
+  width: 50%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.nasa-photo-description {
+  width: 50%;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.nasa-photo-container h1 {
+  font-size: 2em;
+  color: #e6e6fa;
+}
+
+.nasa-photo-container p:first-of-type {
+  color: #add8e6;
+}
+
+.nasa-photo-container p:not(:first-of-type) {
+  color: #f0f0f0;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(50, 50, 50, 0.8);
+  padding: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-family: 'Righteous', cursive;
+  font-size: 1.2em;
+  transition: color 0.3s, background-color 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar a:hover {
+  color: #000;
+  background-color: #c0c0c0;
+  padding: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.jwst-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.jwst-image-container {
+  width: 45%; /* Adjust the width as needed */
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.jwst-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px; /* Optional, for rounded corners */
 }
+
+/* Keep the existing styles for .pagination */
+
