@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap'); /* New font for a space vibe */
 
 /* General Styles */
 body {
   margin: 0;
   font-family: 'Righteous', cursive;
-  background: url('back2.png') no-repeat center center fixed;
+  background: url('back2.png') no-repeat center center fixed; /* Consider updating this background to a dynamic space image */
   background-size: cover;
   color: #f0f0f0;
 }
@@ -13,8 +14,26 @@ body {
 .home-container {
   height: 100vh;
   display: flex;
+  flex-direction: column; /* Changed to column for additional text */
   justify-content: center;
   align-items: center;
+  text-align: center; /* Center the text */
+}
+
+.home-title, .home-tagline {
+  font-family: 'Space Mono', monospace; /* New font for thematic text */
+  margin: 20px 0; /* Spacing between elements */
+}
+
+.home-title {
+  font-size: 2.5em;
+  color: #EDEDED;
+}
+
+.home-tagline {
+  font-size: 1.2em;
+  max-width: 600px;
+  color: #CCCCCC; /* Slightly dimmed for contrast */
 }
 
 .home-link {
@@ -29,9 +48,9 @@ body {
 }
 
 .home-link:hover {
-  background-color: #c0c0c0;
-  color: #000;
-  transform: scale(1.1);
+  background-color: #a8a8a8; /* Lighter grey for hover state */
+  color: #202020; /* Darker text for contrast */
+  transform: scale(1.05); /* Subtle scale increase */
 }
 
 /* NasaPhoto Page Styles */
@@ -45,7 +64,7 @@ body {
   max-width: 1200px;
   height: 80vh;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly more opaque for better readability */
   border-radius: 10px;
   font-family: 'Righteous', cursive;
   overflow: hidden;
@@ -55,25 +74,20 @@ body {
   width: 50%;
   max-height: 100%;
   object-fit: cover;
+  border-radius: 5px; /* Rounded corners for the image */
 }
 
 .nasa-photo-description {
   width: 50%;
   padding: 15px;
   overflow-y: auto;
+  font-family: 'Space Mono', monospace; /* Consistent font for space theme */
 }
 
-.nasa-photo-container h1 {
-  font-size: 2em;
-  color: #e6e6fa;
-}
-
-.nasa-photo-container p:first-of-type {
-  color: #add8e6;
-}
-
-.nasa-photo-container p:not(:first-of-type) {
-  color: #f0f0f0;
+/* Enhanced title and paragraph styles for better visibility and thematic alignment */
+.nasa-photo-container h1, .nasa-photo-container p {
+  color: #E6E6E6; /* Unified color for simplicity and readability */
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); /* Soft glow for a celestial feel */
 }
 
 /* Navbar Styles */
@@ -116,5 +130,4 @@ body {
   border-radius: 5px; /* Optional, for rounded corners */
 }
 
-/* Keep the existing styles for .pagination */
-
+/* No changes to .pagination styles as they were not provided, but consider styling them to match the space theme */
